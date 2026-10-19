@@ -1,0 +1,21 @@
+== calculate_balances ==
+  PASS: payer's balance reflects what others owe them
+  PASS: participant balance is negative (owes money)
+  PASS: balances sum to zero (money isn't created or destroyed)
+  PASS: multiple expenses net out correctly for Alice
+  PASS: multiple expenses net out correctly for Bob (paid 30, owes 20+10)
+  PASS: balances still sum to zero across multiple expenses
+== simplify_debts ==
+  PASS: simple 2-person debt: exactly one settlement
+  PASS: settlement direction is correct (debtor pays creditor)
+  PASS: settlement amount matches the debt
+  PASS: 3-person case settles the full amount owed
+  PASS: 3-person case uses minimal transactions (2, not 3+)
+  PASS: already-settled group produces no transactions
+  PASS: applying all settlements brings every balance to ~zero
+== end-to-end: realistic group trip scenario ==
+  PASS: group scenario balances sum to zero
+  PASS: group scenario settlements fully resolve all balances
+  PASS: group scenario uses a reasonable number of transactions (<=3 for 4 people)
+
+16 passed, 0 failed
